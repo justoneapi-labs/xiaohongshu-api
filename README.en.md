@@ -9,8 +9,8 @@ This is a third-party service integration, not an official Xiaohongshu SDK. Sour
 Python 3.10+, no third-party dependencies:
 
 ```bash
-git clone https://github.com/justoneapi-labs/justoneapi-xiaohongshu-api.git
-cd justoneapi-xiaohongshu-api
+git clone https://github.com/justoneapi-labs/xiaohongshu-api.git
+cd xiaohongshu-api
 export JUSTONEAPI_TOKEN='YOUR_TOKEN'
 python xhs.py search 'coffee' --page 1
 python xhs.py detail 'YOUR_NOTE_ID'
@@ -19,7 +19,7 @@ python xhs.py comments 'YOUR_NOTE_ID'
 
 Each invocation sends one request. No automatic bulk pagination or retries. For comments, use `--cursor` with the cursor documented for the previous response. Tokens are query parameters read from the environment. Never commit credentials.
 
-Successful responses (`code == 0`) are printed as JSON. HTTP, network and business errors produce a nonzero exit code without printing the request URL. Response data varies by endpoint/version; consult the [API documentation](https://docs.justoneapi.com/en/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_justoneapi_xiaohongshu_api&utm_content=readme_docs).
+Successful responses (`code == 0`) are printed as JSON. HTTP, network and business errors produce a nonzero exit code without printing the request URL. Response data varies by endpoint/version; consult the [API documentation](https://docs.justoneapi.com/en/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_docs).
 
 ## Endpoints
 
@@ -33,4 +33,4 @@ All requests use `https://api.justoneapi.com` and a `token` query parameter.
 
 Run `python -m unittest -v`. Tests mock the network and do not make paid API calls or establish live endpoint health.
 
-[Get a token](https://dashboard.justoneapi.com/en/login?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_justoneapi_xiaohongshu_api&utm_content=readme_token) · [Website](https://justoneapi.com/en/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_justoneapi_xiaohongshu_api&utm_content=readme_home) · [Full Python SDK](https://github.com/justoneapi-labs/justoneapi-python)
+[Get a token](https://dashboard.justoneapi.com/en/login?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_token) · [Website](https://justoneapi.com/en/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_home) · [Full Python SDK](https://github.com/justoneapi-labs/justoneapi-python)

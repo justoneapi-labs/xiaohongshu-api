@@ -2,7 +2,7 @@
 
 使用 Just One API 调用小红书笔记搜索、笔记详情和评论接口。提供可以直接运行的 Python 示例，无第三方 Python 依赖。
 
-[English](README.en.md) · [接口文档](https://docs.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_justoneapi_xiaohongshu_api&utm_content=readme_docs) · [获取 Token](https://dashboard.justoneapi.com/zh/login?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_justoneapi_xiaohongshu_api&utm_content=readme_token)
+[English](README.en.md) · [接口文档](https://docs.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_docs) · [获取 Token](https://dashboard.justoneapi.com/zh/login?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_token)
 
 这是 **Just One API 第三方服务的调用示例**，不是小红书官方 SDK。示例代码开源，接口服务需要 Just One API Token，调用费用及可用性以控制台和在线文档为准。
 
@@ -11,8 +11,8 @@
 需要 Python 3.10 或更高版本。
 
 ```bash
-git clone https://github.com/justoneapi-labs/justoneapi-xiaohongshu-api.git
-cd justoneapi-xiaohongshu-api
+git clone https://github.com/justoneapi-labs/xiaohongshu-api.git
+cd xiaohongshu-api
 export JUSTONEAPI_TOKEN='替换成你自己的 Token'
 python xhs.py search '咖啡'
 ```
@@ -71,8 +71,8 @@ python -m unittest -v
 
 ## 文档与支持
 
-- [Just One API 官网](https://justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_justoneapi_xiaohongshu_api&utm_content=readme_home)
-- [小红书接口及其他接口文档](https://docs.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_justoneapi_xiaohongshu_api&utm_content=readme_docs)
+- [Just One API 官网](https://justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_home)
+- [小红书接口及其他接口文档](https://docs.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_docs)
 - 示例代码问题可以提交本仓库 Issue；请移除 Token 和私人数据。
 
 ## 许可证

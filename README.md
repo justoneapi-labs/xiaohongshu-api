@@ -1,6 +1,6 @@
 # 小红书API · 小红书接口
 
-使用 Just One API 调用小红书笔记搜索、笔记详情和评论接口。提供可以直接运行的 Python 示例，无第三方 Python 依赖。
+使用 Just One API 调用小红书笔记搜索、笔记详情、评论和评论回复接口。提供可以直接运行的 Python 示例，无第三方 Python 依赖。
 
 [English](README.en.md) · [接口文档](https://docs.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_docs) · [获取 Token](https://dashboard.justoneapi.com/zh/login?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_token)
 
@@ -26,6 +26,7 @@ python xhs.py search '咖啡'
 | 笔记搜索 | `/api/xiaohongshu/search-note/v4` | `keyword` |
 | 笔记详情 | `/api/xiaohongshu/get-note-detail/v6` | `noteId` |
 | 笔记评论 | `/api/xiaohongshu/get-note-comment/v4` | `noteId` |
+| 评论回复 | `/api/xiaohongshu/get-note-sub-comment/v2` | `noteId`、`commentId` |
 
 所有请求额外携带 `token` 查询参数，示例从环境变量读取。接口路径和参数基于公开 OpenAPI；完整过滤参数、返回字段和版本状态以在线文档为准。
 
@@ -41,6 +42,12 @@ python xhs.py comments 'YOUR_NOTE_ID'
 
 # 获取后续评论：按文档从上一次响应提取游标
 python xhs.py comments 'YOUR_NOTE_ID' --cursor 'PREVIOUS_CURSOR'
+
+# 获取一条评论的回复；commentId 来自评论结果
+python xhs.py replies 'YOUR_NOTE_ID' --comment-id 'YOUR_COMMENT_ID'
+
+# 获取后续回复，沿用上一页返回的游标
+python xhs.py replies 'YOUR_NOTE_ID' --comment-id 'YOUR_COMMENT_ID' --cursor 'PREVIOUS_CURSOR'
 ```
 
 ## 返回结果与错误

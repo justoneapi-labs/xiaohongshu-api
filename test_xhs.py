@@ -18,6 +18,20 @@ class ClientTests(unittest.TestCase):
             self.fail("Network must not be called")
         with self.assertRaises(ValueError):
             request("detail","id","",opener=fail)
+    def test_replies_require_comment_id_and_encode_cursor(self):
+        def fail(*args, **kwargs):
+            self.fail("Network must not be called without a comment ID")
+        with self.assertRaises(ValueError):
+            request("replies", "note-id", "test-only", opener=fail)
+        def fake(url, timeout):
+            u = urlparse(url)
+            self.assertEqual(u.path, "/api/xiaohongshu/get-note-sub-comment/v2")
+            self.assertEqual(parse_qs(u.query), {
+                "token": ["test-only"], "noteId": ["note-id"],
+                "commentId": ["comment & id"], "lastCursor": ["cursor + 2"],
+            })
+            return io.StringIO(json.dumps({"code": 0, "data": []}))
+        self.assertEqual(request("replies", "note-id", "test-only", comment_id="comment & id", cursor="cursor + 2", opener=fake)["data"], [])
     def test_http_error_does_not_expose_token(self):
         def fake(url, timeout):
             raise HTTPError(url,403,"test-only",None,None)

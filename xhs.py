@@ -43,7 +43,7 @@ def request(action, value, token, *, page=1, cursor="", comment_id="", opener=ur
     return result
 
 def main():
-    parser = argparse.ArgumentParser(description="小红书API / 小红书接口 — Just One API examples")
+    parser = argparse.ArgumentParser(description="小红书API / 小红书接口 — JustOneAPI examples")
     parser.add_argument("action", choices=ENDPOINTS)
     parser.add_argument("value", help="Search keyword, or note ID for detail/comments/replies")
     parser.add_argument("--page", type=int, default=1)

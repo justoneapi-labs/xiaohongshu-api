@@ -1,8 +1,8 @@
 # Xiaohongshu API examples
 
-Minimal Python examples for Xiaohongshu note search, note details, comments, and comment replies through Just One API. [简体中文](README.md)
+Minimal Python examples for Xiaohongshu note search, note details, comments, and comment replies through JustOneAPI. [简体中文](README.md)
 
-This is a third-party service integration, not an official Xiaohongshu SDK. Source code is MIT-licensed; API access requires a Just One API token and may incur charges. See the dashboard for pricing and permissions.
+This is a third-party service integration, not an official Xiaohongshu SDK. Source code is MIT-licensed; API access requires a JustOneAPI token and may incur charges. See the dashboard for pricing and permissions.
 
 ## Quick start
 

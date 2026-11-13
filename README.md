@@ -1,10 +1,10 @@
 # 小红书API · 小红书接口
 
-使用 Just One API 调用小红书笔记搜索、笔记详情、评论和评论回复接口。提供可以直接运行的 Python 示例，无第三方 Python 依赖。
+使用 JustOneAPI 调用小红书笔记搜索、笔记详情、评论和评论回复接口。提供可以直接运行的 Python 示例，无第三方 Python 依赖。
 
 [English](README.en.md) · [接口文档](https://docs.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_docs) · [获取 Token](https://dashboard.justoneapi.com/zh/login?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_token)
 
-这是 **Just One API 第三方服务的调用示例**，不是小红书官方 SDK。示例代码开源，接口服务需要 Just One API Token，调用费用及可用性以控制台和在线文档为准。
+这是 **JustOneAPI 第三方服务的调用示例**，不是小红书官方 SDK。示例代码开源，接口服务需要 JustOneAPI Token，调用费用及可用性以控制台和在线文档为准。
 
 ## 三分钟开始
 
@@ -66,7 +66,7 @@ result = request('search', '咖啡', os.environ['JUSTONEAPI_TOKEN'])
 print(result['data'])
 ```
 
-需要异步客户端和更多平台时，可以使用 [Just One API Python SDK](https://github.com/justoneapi-labs/justoneapi-python)。本仓库专注于小红书API的最小调用流程。
+需要异步客户端和更多平台时，可以使用 [JustOneAPI Python SDK](https://github.com/justoneapi-labs/justoneapi-python)。本仓库专注于小红书API的最小调用流程。
 
 ## 测试
 
@@ -78,7 +78,7 @@ python -m unittest -v
 
 ## 文档与支持
 
-- [Just One API 官网](https://justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_home)
+- [JustOneAPI 官网](https://justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_home)
 - [小红书接口及其他接口文档](https://docs.justoneapi.com/zh/?utm_source=github.com&utm_medium=referral&utm_campaign=justoneapi_labs_xiaohongshu_api&utm_content=readme_docs)
 - 示例代码问题可以提交本仓库 Issue；请移除 Token 和私人数据。
 
